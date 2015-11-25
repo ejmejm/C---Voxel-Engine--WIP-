@@ -1,0 +1,53 @@
+﻿Build started 11/25/2015 4:36:03 PM.
+     1>Project "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\EdanEngine-core\EdanEngine-core.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D GLEW_STATIC /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\\" /Fd"C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\graphics\window.h(37): warning C4244: 'return' : conversion from 'const double' to 'int', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\graphics\window.h(38): warning C4244: 'return' : conversion from 'const double' to 'int', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\math\math_func.h(9): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\graphics\batch3drenderer.h(11): warning C4005: 'RENDERER_VERTEX_SIZE' : macro redefinition
+                 c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\graphics\batch2drenderer.h(11) : see previous definition of 'RENDERER_VERTEX_SIZE'
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\graphics\batch3drenderer.h(13): warning C4005: 'RENDERER_BUFFER_SIZE' : macro redefinition
+                 c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\graphics\batch2drenderer.h(13) : see previous definition of 'RENDERER_BUFFER_SIZE'
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\graphics\batch3drenderer.h(14): warning C4005: 'RENDERER_INDICES_SIZE' : macro redefinition
+                 c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\graphics\batch2drenderer.h(14) : see previous definition of 'RENDERER_INDICES_SIZE'
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\input\movement.h(20): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\input\movement.h(24): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\input\movement.h(28): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\input\movement.h(32): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\input\movement.h(36): warning C4244: '+=' : conversion from 'const double' to 'float', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\input\movement.h(40): warning C4244: '-=' : conversion from 'const double' to 'float', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\input\movement.h(43): warning C4244: '+=' : conversion from 'const double' to 'float', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\input\movement.h(44): warning C4244: '+=' : conversion from 'const double' to 'float', possible loss of data
+     1>c:\program files (x86)\windows kits\8.1\include\shared\minwindef.h(130): warning C4005: 'APIENTRY' : macro redefinition
+                 c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\dependencies\glfw\include\glfw\glfw3.h(96) : see previous definition of 'APIENTRY'
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\main.cpp(20): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\main.cpp(62): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\main.cpp(85): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\EdanEngine-core.exe" /INCREMENTAL /NOLOGO glfw3.lib glew32s.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\EdanEngine-core.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\EdanEngine-core.lib" /MACHINE:X86 "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\main.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\camera.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\batch2Drenderer.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\batch3Drenderer.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\buffer.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\indexbuffer.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\vertexarray.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\cube.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\simple2Drenderer.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\shader.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\simple3Drenderer.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\sprite.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\staticcube.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\staticsprite.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\window.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\mat4.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\vec2.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\vec3.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\Intermediates\vec4.obj"
+         EdanEngine-core.vcxproj -> C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Debug\EdanEngine-core.exe
+     1>Done Building Project "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\EdanEngine-core\EdanEngine-core.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.16
