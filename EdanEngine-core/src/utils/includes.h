@@ -17,5 +17,6 @@
 #include "../graphics/staticcube.h"
 #include "../graphics/cube.h"
 #include "../input/movement.h"
+#include "../entities/pointlight.h"
 #include "timer.h"
 #include <time.h>

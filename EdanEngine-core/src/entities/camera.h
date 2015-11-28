@@ -2,18 +2,18 @@
 
 #include "../math/math.h"
 #include "../graphics/shader.h"
+#include "entity.h"
 
 namespace edan
 {
 
-	class Camera
+	class Camera : public Entity
 	{
-	public:
-		math::vec3 position;
-		float pitch, yaw, roll;
 
+	private:
 		graphics::Shader m_Shader;
-
+	public:
+		float pitch, yaw, roll;
 	public:
 		Camera(math::vec3 _position, float _pitch, float _yaw, float _roll, graphics::Shader shader);
 

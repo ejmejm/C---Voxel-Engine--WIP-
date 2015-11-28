@@ -8,7 +8,7 @@ namespace edan
 	class Movement
 	{
 	public:
-		static void movementUpdate(const graphics::Window &window, Camera &camera, const float &speed, const double &delta, const double &deltaX, const double &deltaY)
+		static void movementUpdate(const graphics::Window &window, Camera &camera, const float &speed, const float &turnSpeed, const double &delta, const double &deltaX, const double &deltaY)
 		{
 			math::vec3 direction = math::vec3(-cos(math::toRadians((camera.pitch + 90))), 0, -cos(math::toRadians(camera.pitch))).norm();
 			math::vec3 directionlr = math::vec3(-cos(math::toRadians((camera.pitch + 90 + 90))), 0, -cos(math::toRadians(camera.pitch + 90))).norm();
@@ -40,8 +40,8 @@ namespace edan
 				camera.position.y -= speed * delta;
 			}
 
-			camera.yaw += speed * delta * deltaY * 80;
-			camera.pitch += speed * delta * deltaX * 80;
+			camera.yaw += turnSpeed * delta * deltaY;
+			camera.pitch += turnSpeed * delta * deltaX;
 
 			if (window.isKeyPressed(GLFW_KEY_ESCAPE))
 			{

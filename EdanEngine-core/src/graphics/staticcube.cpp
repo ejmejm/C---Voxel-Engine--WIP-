@@ -7,16 +7,29 @@ namespace edan {
 			: Renderable3D(math::vec3(x, y, 0), sideLength, color), m_Shader(shader)
 		{
 			m_VertexArray = new VertexArray();
+
 			GLfloat vertices[] =
 			{
-				0, 0, 0,
-				sideLength, 0, 0,
-				sideLength, sideLength, 0,
-				0, sideLength, 0,
 				0, 0, sideLength,
 				sideLength, 0, sideLength,
 				sideLength, sideLength, sideLength,
-				0, sideLength, sideLength
+				0, sideLength, sideLength,
+				0, 0, 0,
+				sideLength, 0, 0,
+				sideLength, sideLength, 0,
+				0, sideLength, 0
+			};
+
+			GLfloat normals[] =
+			{
+				-1.0f, -1.0f, 1.0f,
+				1.0f, -1.0f, 1.0f,
+				1.0f, 1.0f, 1.0f,
+				-1.0f, 1.0f, 1.0f,
+				-1.0f, -1.0f, -1.0f,
+				1.0f, -1.0f, -1.0f,
+				1.0f, 1.0f, -1.0f,
+				-1.0f, 1.0f, -1.0f
 			};
 
 			GLfloat colors[] =
@@ -33,6 +46,7 @@ namespace edan {
 
 			m_VertexArray->addBuffer(new Buffer(vertices, 8 * 3, 3), 0);
 			m_VertexArray->addBuffer(new Buffer(colors, 8 * 4, 4), 1);
+			m_VertexArray->addBuffer(new Buffer(normals, 8 * 3, 3), 2);
 
 			GLushort indices[] = { 
 				0, 1, 2, 2, 3, 0,

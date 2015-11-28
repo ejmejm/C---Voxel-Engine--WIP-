@@ -1,8 +1,10 @@
-﻿Build started 11/25/2015 3:00:15 PM.
+﻿Build started 11/26/2015 3:12:58 PM.
      1>Project "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\EdanEngine-core\EdanEngine-core.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Ob2 /Oi /Ot /Oy- /GL /D GLEW_STATIC /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm- /EHsc /MD /GS /Gy /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\\" /Fd"C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Ob2 /Oi /Ot /Oy- /GL /D GLEW_STATIC /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm- /EHsc /MD /GS /Gy /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\\" /Fd"C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp src\terrain\octTree.cpp
          main.cpp
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../graphics/window.h(37): warning C4244: 'return' : conversion from 'const double' to 'int', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../graphics/window.h(38): warning C4244: 'return' : conversion from 'const double' to 'int', possible loss of data
      1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\math\math_func.h(9): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
      1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../graphics/batch3Drenderer.h(11): warning C4005: 'RENDERER_VERTEX_SIZE' : macro redefinition
                  c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../graphics/batch2Drenderer.h(11) : see previous definition of 'RENDERER_VERTEX_SIZE'
@@ -16,17 +18,22 @@
      1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../input/movement.h(32): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
      1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../input/movement.h(36): warning C4244: '+=' : conversion from 'const double' to 'float', possible loss of data
      1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../input/movement.h(40): warning C4244: '-=' : conversion from 'const double' to 'float', possible loss of data
-     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../input/movement.h(44): warning C4244: '-=' : conversion from 'const double' to 'float', possible loss of data
-     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../input/movement.h(48): warning C4244: '+=' : conversion from 'const double' to 'float', possible loss of data
-     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../input/movement.h(52): warning C4244: '-=' : conversion from 'const double' to 'float', possible loss of data
-     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../input/movement.h(56): warning C4244: '+=' : conversion from 'const double' to 'float', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../input/movement.h(43): warning C4244: '+=' : conversion from 'const double' to 'float', possible loss of data
+     1>c:\users\meyer family\documents\visual studio 2013\projects\voxelgame\edanengine-core\src\utils\../input/movement.h(44): warning C4244: '+=' : conversion from 'const double' to 'float', possible loss of data
      1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(130): warning C4005: 'APIENTRY' : macro redefinition
                  C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\Dependencies\GLFW\include\GLFW/glfw3.h(96) : see previous definition of 'APIENTRY'
-     1>main.cpp(21): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>main.cpp(79): warning C4018: '<' : signed/unsigned mismatch
+     1>main.cpp(22): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>main.cpp(25): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>main.cpp(78): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>main.cpp(81): warning C4018: '<' : signed/unsigned mismatch
+     1>main.cpp(112): warning C4018: '<' : signed/unsigned mismatch
+         octTree.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\EdanEngine-core.exe" /NOLOGO glfw3.lib glew32s.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\EdanEngine-core.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\EdanEngine-core.lib" /MACHINE:X86 /SAFESEH "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\main.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\block.obj"
          "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\camera.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\entity.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\pointlight.obj"
          "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\batch2Drenderer.obj"
          "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\batch3Drenderer.obj"
          "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\buffer.obj"
@@ -44,6 +51,7 @@
          "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\vec2.obj"
          "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\vec3.obj"
          "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\vec4.obj"
+         "C:\Users\Meyer Family\Documents\Visual Studio 2013\Projects\VoxelGame\bin\Release\Intermediates\octTree.obj"
      1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
          Generating code
          Finished generating code
@@ -53,4 +61,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.74
+Time Elapsed 00:00:02.26

@@ -15,6 +15,7 @@ namespace edan{
 
 #define SHADER_VERTEX_INDEX 0
 #define SHADER_COLOR_INDEX 1
+#define SHADER_NORMAL_INDEX 2
 
 		class Batch3DRenderer : public Renderer3D
 		{

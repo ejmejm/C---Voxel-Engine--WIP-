@@ -24,8 +24,10 @@ namespace edan{
 			glBufferData(GL_ARRAY_BUFFER, RENDERER_BUFFER_SIZE, NULL, GL_DYNAMIC_DRAW);
 			glEnableVertexAttribArray(SHADER_VERTEX_INDEX);
 			glEnableVertexAttribArray(SHADER_COLOR_INDEX);
+			glEnableVertexAttribArray(SHADER_NORMAL_INDEX);
 			glVertexAttribPointer(SHADER_VERTEX_INDEX, 3, GL_FLOAT, GL_FALSE, RENDERER_VERTEX_SIZE, (const GLvoid*)0);
 			glVertexAttribPointer(SHADER_COLOR_INDEX, 4, GL_UNSIGNED_BYTE, GL_TRUE, RENDERER_VERTEX_SIZE, (const GLvoid*)(offsetof(VertexData3D, VertexData3D::color)));
+			glVertexAttribPointer(SHADER_NORMAL_INDEX, 3, GL_FLOAT, GL_FALSE, RENDERER_VERTEX_SIZE, (const GLvoid*)(offsetof(VertexData3D, VertexData3D::normal)));
 			glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 			GLushort indices[RENDERER_INDICES_SIZE];
@@ -80,6 +82,9 @@ namespace edan{
 
 			m_IBO = new IndexBuffer(indices, RENDERER_INDICES_SIZE);
 
+			glEnable(GL_CULL_FACE);
+			glCullFace(GL_BACK);
+
 			glBindVertexArray(0);
 		}
 
@@ -102,36 +107,44 @@ namespace edan{
 
 			unsigned int c = a << 24 | b << 16 | g << 8 | r;
 
-			m_Buffer->vertex = position;
-			m_Buffer->color = c;
-			m_Buffer++;
-
-			m_Buffer->vertex = math::vec3(position.x + size, position.y, position.z);
-			m_Buffer->color = c;
-			m_Buffer++;
-
-			m_Buffer->vertex = math::vec3(position.x + size, position.y + size, position.z);
-			m_Buffer->color = c;
-			m_Buffer++;
-
-			m_Buffer->vertex = math::vec3(position.x, position.y + size, position.z);
-			m_Buffer->color = c;
-			m_Buffer++;
-
 			m_Buffer->vertex = math::vec3(position.x, position.y, position.z + size);
 			m_Buffer->color = c;
+			m_Buffer->normal = math::vec3(-1.0f, -1.0f, 1.0f);
 			m_Buffer++;
 
 			m_Buffer->vertex = math::vec3(position.x + size, position.y, position.z + size);
 			m_Buffer->color = c;
+			m_Buffer->normal = math::vec3(1.0f, -1.0f, 1.0f);
 			m_Buffer++;
 
 			m_Buffer->vertex = math::vec3(position.x + size, position.y + size, position.z + size);
 			m_Buffer->color = c;
+			m_Buffer->normal = math::vec3(1.0f, 1.0f, 1.0f);
 			m_Buffer++;
 
 			m_Buffer->vertex = math::vec3(position.x, position.y + size, position.z + size);
 			m_Buffer->color = c;
+			m_Buffer->normal = math::vec3(-1.0f, 1.0f, 1.0f);
+			m_Buffer++;
+
+			m_Buffer->vertex = math::vec3(position.x, position.y, position.z);
+			m_Buffer->color = c;
+			m_Buffer->normal = math::vec3(-1.0f, -1.0f, -1.0f);
+			m_Buffer++;
+
+			m_Buffer->vertex = math::vec3(position.x + size, position.y, position.z);
+			m_Buffer->color = c;
+			m_Buffer->normal = math::vec3(1.0f, -1.0f, -1.0f);
+			m_Buffer++;
+
+			m_Buffer->vertex = math::vec3(position.x + size, position.y + size, position.z);
+			m_Buffer->color = c;
+			m_Buffer->normal = math::vec3(1.0f, 1.0f, -1.0f);
+			m_Buffer++;
+
+			m_Buffer->vertex = math::vec3(position.x, position.y + size, position.z);
+			m_Buffer->color = c;
+			m_Buffer->normal = math::vec3(-1.0f, 1.0f, -1.0f);
 			m_Buffer++;
 
 			if (m_IndexCount >= RENDERER_INDICES_SIZE)
